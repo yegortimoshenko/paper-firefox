@@ -1,0 +1,48 @@
+{
+  "name": "paper",
+  "title": "Paper",
+  "id": "jid1-3MbuIoOYk03BMg",
+  "description": "Instapaper add-on for Firefox that sends an article to Instapaper by Shift-clicking a link, doesn't make any noise and is pretty customizable. Great for adding links from one page in a bulk, you just click on each one and there you go. Old-fashioned action button is provided as well.",
+  "author": "Yegor Timoschenko",
+  "license": "ISC",
+  "version": "0.2",
+  "preferences": [{
+    "type": "string",
+    "name": "username",
+    "title": "Username",
+    "description": "Instapaper username. Most likely to be your e-mail."
+  }, {
+    "type": "string",
+    "name": "password",
+    "title": "Password",
+    "description": "Instapaper password, if any. Stored in your Firefox unencrypted. Sent to Instapaper only via HTTPS."
+  }, {
+    "type": "string",
+    "name": "combo",
+    "title": "Hotkey",
+    "description": "Combination of keys used to save URL of your current active tab. Leave blank to turn it off. You will need to restart your browser. See hotkey syntax: http://mzl.la/1nTyp0M.",
+    "value": ""
+  }, {
+    "type": "menulist",
+    "name": "modifier",
+    "title": "Modifier",
+    "description": "Allows to send an article to Instapaper by clicking a link while holding down a modifier key from the list. You will need to restart your browser.",
+    "value": "shift",
+    "options": [{
+      "value": "none",
+      "label": "None"
+    }, {
+      "value": "alt",
+      "label": "Alt"
+    }, {
+      "value": "ctrl",
+      "label": "Ctrl"
+    }, {
+      "value": "shift",
+      "label": "Shift"
+    }, {
+      "value": "cmd",
+      "label": "Command"
+    }]
+  }]
+}
