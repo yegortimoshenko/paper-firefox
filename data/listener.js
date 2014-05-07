@@ -11,10 +11,16 @@ function listener(event) {
 
 var checkModifier = function(modifier) {
   switch (modifier) {
-    case "alt":   return function (e) { return e.altKey }
-    case "ctrl":  return function (e) { return e.ctrlKey }
-    case "shift": return function (e) { return e.shiftKey }
-    case "cmd":   return function (e) { return e.metaKey }
+    case "S":  return function (e) { return e.shiftKey }
+    case "C":  return function (e) { return e.ctrlKey }
+    case "CS": return function (e) { return e.ctrlKey && e.shiftKey }
+    case "CA": return function (e) { return e.ctrlKey && e.altKey }
+    case "A":  return function (e) { return e.altKey }
+    case "AS": return function (e) { return e.altKey && e.shiftKey }
+    case "AC": return function (e) { return e.altKey && e.ctrlKey }
+    case "M":  return function (e) { return e.metaKey }
+    case "MS": return function (e) { return e.metaKey && e.shiftKey }
+    case "MC": return function (e) { return e.metaKey && e.ctrlKey }
   }
 }(self.options.modifier);
 
