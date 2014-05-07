@@ -27,22 +27,40 @@
     "name": "modifier",
     "title": "Modifier",
     "description": "Allows to send an article to Instapaper by clicking a link while holding down a modifier key from the list. You will need to restart your browser.",
-    "value": "shift",
+    "value": "S",
     "options": [{
-      "value": "none",
+      "value": "N",
       "label": "None"
     }, {
-      "value": "alt",
-      "label": "Alt"
-    }, {
-      "value": "ctrl",
-      "label": "Ctrl"
-    }, {
-      "value": "shift",
+      "value": "S",
       "label": "Shift"
     }, {
-      "value": "cmd",
+      "value": "C",
+      "label": "Ctrl"
+    }, {
+      "value": "CS",
+      "label": "Ctrl+Shift"
+    }, {
+      "value": "CA",
+      "label": "Ctrl+Alt"
+    }, {
+      "value": "A",
+      "label": "Alt"
+    }, {
+      "value": "AS",
+      "label": "Alt+Shift"
+    }, {
+      "value": "AC",
+      "label": "Alt+Ctrl"
+    }, {
+      "value": "M",
       "label": "Command"
+    }, {
+      "value": "MS",
+      "label": "Command+Shift"
+    }, {
+      "value": "MC",
+      "label": "Command+Ctrl"
     }]
   }]
 }
