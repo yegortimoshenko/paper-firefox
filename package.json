@@ -5,7 +5,7 @@
   "description": "Instapaper add-on for Firefox that sends an article to Instapaper by Shift-clicking a link, doesn't make any noise and is pretty customizable. Great for adding links from one page in a bulk, you just click on each one and there you go. Old-fashioned action button is provided as well.",
   "author": "Yegor Timoschenko",
   "license": "ISC",
-  "version": "0.2",
+  "version": "0.3",
   "preferences": [{
     "type": "string",
     "name": "username",
@@ -62,5 +62,17 @@
       "value": "MC",
       "label": "Command+Ctrl"
     }]
+  }, {
+    "type": "bool",
+    "name": "notifications",
+    "title": "Notifications",
+    "description": "Makes system notifications when you successfully add a link to Instapaper. Discouraged to use since it makes too much noise.",
+    "value": false
+  }, {
+    "type": "bool",
+    "name": "rightClick",
+    "title": "Right-click option",
+    "description": "Adds a “Send To Instapaper” option to right-click context menu. You will need to restart your browser.",
+    "value": true
   }]
 }
