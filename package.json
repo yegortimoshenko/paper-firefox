@@ -1,78 +1,90 @@
 {
-  "name": "paper",
-  "title": "Paper",
-  "id": "jid1-3MbuIoOYk03BMg",
-  "description": "Instapaper add-on for Firefox that sends an article to Instapaper by Shift-clicking a link, doesn't make any noise and is pretty customizable. Great for adding links from one page in a bulk, you just click on each one and there you go. Old-fashioned action button is provided as well.",
-  "author": "Yegor Timoschenko",
-  "license": "ISC",
-  "version": "0.3",
-  "preferences": [{
-    "type": "string",
-    "name": "username",
-    "title": "Username",
-    "description": "Instapaper username. Most likely to be your e-mail."
-  }, {
-    "type": "string",
-    "name": "password",
-    "title": "Password",
-    "description": "Instapaper password, if any. Stored in your Firefox unencrypted. Sent to Instapaper only via HTTPS."
-  }, {
-    "type": "string",
-    "name": "combo",
-    "title": "Hotkey",
-    "description": "Combination of keys used to save URL of your current active tab. Leave blank to turn it off. You will need to restart your browser. See hotkey syntax: http://mzl.la/1nTyp0M.",
-    "value": ""
-  }, {
-    "type": "menulist",
-    "name": "modifier",
-    "title": "Modifier",
-    "description": "Allows to send an article to Instapaper by clicking a link while holding down a modifier key from the list. You will need to restart your browser.",
-    "value": "S",
-    "options": [{
-      "value": "N",
-      "label": "None"
+    "id": "jid1-3MbuIoOYk03BMg@jetpack",
+    "main": "lib/main.js",
+    "name": "paper",
+    "title": "Paper",
+    "license": "ISC",
+    "version": "1.0",
+    "author": "Yegor Timoshenko",
+    "description": "Instapaper addon. Press toolbar button, right-click menu option, or customizable hotkey to send current page to Instapaper. Send links in bulk by shift-clicking them.",
+    "locales": {
+        "ru": { "description": "Аддон для Instapaper. Чтобы послать статью в Instapaper, нажмите на кнопку в тулбаре, или выставляемый хоткей на клавиатуре, или опцию по клику правой кнопкой мыши. Чтобы добавить много ссылок сразу, зажмите Shift и прокликайте по нужным ссылкам." }
+    },
+    "permissions": {
+        "multiprocess": true
+    },
+    "preferences": [{
+        "type": "string",
+        "name": "username",
+        "title": "Email or username"
     }, {
-      "value": "S",
-      "label": "Shift"
+        "type": "string",
+        "name": "password",
+        "title": "Password",
+        "description": "Stored on your computer unencrypted. Sent only to Instapaper servers and only through encrypted connection. Leave empty if your account doesn't have a password."
     }, {
-      "value": "C",
-      "label": "Ctrl"
+        "type": "string",
+        "name": "combo",
+        "title": "Hotkey",
+        "description": "Saves current page to Instapaper when pressed. Leave blank to turn it off. Restart your browser in order to apply changes.",
+        "value": ""
     }, {
-      "value": "CS",
-      "label": "Ctrl+Shift"
+        "type": "control",
+        "label": "Set",
+        "name": "setCombo",
+        "title": "Set hotkey",
+        "description": "Press the button on the right and then press hotkey on your keyboard. Press ESC to cancel."
     }, {
-      "value": "CA",
-      "label": "Ctrl+Alt"
+        "type": "menulist",
+        "name": "modifier",
+        "title": "Modifier key",
+        "description": "While pressed, left-click on a link and it will be sent to Instapaper. Restart your browser in order to apply changes.",
+        "value": "S",
+        "options": [{
+            "value": "N",
+            "label": "None"
+        }, {
+            "value": "S",
+            "label": "Shift"
+        }, {
+            "value": "A",
+            "label": "Alt"
+        }, {
+            "value": "AC",
+            "label": "Alt+Ctrl"
+        }, {
+            "value": "AS",
+            "label": "Alt+Shift"
+        }, {
+            "value": "C",
+            "label": "Ctrl"
+        }, {
+            "value": "CA",
+            "label": "Ctrl+Alt"
+        }, {
+            "value": "CS",
+            "label": "Ctrl+Shift"
+        }, {
+            "value": "M",
+            "label": "Command"
+        }, {
+            "value": "MC",
+            "label": "Command+Ctrl"
+        }, {
+            "value": "MS",
+            "label": "Command+Shift"
+        }]
     }, {
-      "value": "A",
-      "label": "Alt"
+        "type": "bool",
+        "name": "notifications",
+        "title": "Notifications",
+        "description": "Sends a system notification when you successfully add a link to Instapaper.",
+        "value": false
     }, {
-      "value": "AS",
-      "label": "Alt+Shift"
-    }, {
-      "value": "AC",
-      "label": "Alt+Ctrl"
-    }, {
-      "value": "M",
-      "label": "Command"
-    }, {
-      "value": "MS",
-      "label": "Command+Shift"
-    }, {
-      "value": "MC",
-      "label": "Command+Ctrl"
+        "type": "bool",
+        "name": "rightClick",
+        "title": "Right-click menu option",
+        "description": "Adds “Send To Instapaper” option to context menu when you right-click a link. Restart browser in order to apply changes.",
+        "value": true
     }]
-  }, {
-    "type": "bool",
-    "name": "notifications",
-    "title": "Notifications",
-    "description": "Makes system notifications when you successfully add a link to Instapaper. Discouraged to use since it makes too much noise.",
-    "value": false
-  }, {
-    "type": "bool",
-    "name": "rightClick",
-    "title": "Right-click option",
-    "description": "Adds a “Send To Instapaper” option to right-click context menu. You will need to restart your browser.",
-    "value": true
-  }]
 }
